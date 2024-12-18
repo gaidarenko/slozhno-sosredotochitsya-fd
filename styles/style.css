@@ -18,7 +18,8 @@
   position: relative;
   margin: 10px;
   color: var(--accent-color);
-  min-height: calc(100vh - 20px);
+  height: calc(100vh - 20px);
+  min-height: 668px;
 }
 
 .decorated-zone::after {
@@ -158,7 +159,8 @@
 }
 
 .footer {
-  min-height: calc(100vh - 20px);
+  height: calc(100vh - 20px);
+  min-height: 668px;
   position: relative;
   display: flex;
   margin: 50px 10px 10px 10px;
@@ -176,6 +178,10 @@
   color: inherit;
   text-decoration: none;
   text-shadow: 2px 1px var(--accent-color);
+}
+
+.link:focus {
+  outline: none;
 }
 
 .link:focus-visible {
