@@ -1,5 +1,292 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  background-image: var(--bg-image);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  justify-items: end;
+  position: relative;
+  margin: 10px;
+  color: var(--accent-color);
+  min-height: calc(100vh - 20px);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--title-color);
+  border-right: 1px solid var(--title-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--title-color);
+  border-bottom: 1px solid var(--title-color);
+}
+
+.header__rec {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header__rec::before {
+  content: 'REC';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-right: 8px;
+}
+
+.header__rec::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  margin-right: 10px;
+}
+
+.header__theme-menu-button {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  color: var(--title-color);
+  border: 1px solid transparent;
+  padding: 8px 13px;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--btn-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--title-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--title-color);
+  pointer-events: none;
+}
+
+.header__title {
+  margin-right: auto;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: clamp(5.98125rem, 5.7844rem + 0.8397vw, 6.1875rem);
+  font-weight: 700;
+  color: var(--header-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+}
+
+.header__text {
+  width: 50%;
+  min-width: 355px;
+}
+
+.section__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+
+.section {
+  margin: 50px 10px 0 10px;
+}
+
+.article__title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.article__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--text-color);
+}
+
+.advice__title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer {
+  min-height: calc(100vh - 20px);
+  position: relative;
+  display: flex;
+  margin: 50px 10px 10px 10px;
+}
+
+.footer__text {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  color: var(--header-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  margin: auto;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 2px 1px var(--accent-color);
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.link:hover {
+  text-decoration: underline solid var(--text-color);
+}
+
+.gallery_item__sunset {
+  grid-area: sunset;
+}
+
+.gallery_item__ice-cream {
+  grid-area: ice-cream;
+}
+
+.gallery_item__tape {
+  grid-area: tape;
+}
+
+.gallery_item__books {
+  grid-area: books;
+}
+
+.gallery_item__street {
+  grid-area: street;
+}
+
+@media (width >= 768px) {
+  .header {
+    margin: 20px;
+    min-height: calc(100vh - 40px);
+  }
+
+  .header__title {
+    font-size: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
+  }
+
+  .footer {
+    min-height: calc(100vh - 40px);
+    margin: 50px 20px 20px 20px;
+  }
+  
+  .section {
+    margin: 100px 20px 0 20px;
+  }
+  
+  .section-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .section-2-columns li:first-child .article__title {
+    margin-top: 0;
+  }
+
+  .section-2-columns > article .article__title {
+    margin-top: 0;
+  } 
+
+  .section-3-columns .section__title {
+    width: calc(33% - 20px);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: dense;
+    gap: 20px;
+
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street"
+  }
+
+  .image {
+    margin-top: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.theme-light .header__rec {
+  display: none; 
+}
+
+@media (prefers-color-scheme: light) {
+  .theme-auto .header__rec {
+    display: none;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    align-self: start;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+  }
+
+  .section-3-columns ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
