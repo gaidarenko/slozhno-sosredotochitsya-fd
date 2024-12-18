@@ -77,9 +77,11 @@
   background-color: transparent;
   color: var(--title-color);
   border: 1px solid transparent;
-  padding: 8px 13px;
+  padding: 4px 13px;
   text-transform: lowercase;
   cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .header__theme-menu-button:hover {
@@ -127,7 +129,19 @@
 }
 
 .section {
-  margin: 50px 10px 0 10px;
+  margin: 40px 10px 0 10px;
+}
+
+.section:nth-child(2) {
+  margin-top: 50px;
+}
+
+.section:nth-child(3) {
+  margin-top: 54px;
+}
+
+.section:nth-child(4) {
+  margin-top: 52px;
 }
 
 .article__title {
@@ -138,7 +152,7 @@
 .article__text {
   font-weight: 400;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 23.4px;
   color: var(--text-color);
 }
 
@@ -164,7 +178,7 @@
   position: relative;
   display: flex;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 42px;
 }
 
 .footer__text {
