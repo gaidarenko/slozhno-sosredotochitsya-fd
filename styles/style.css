@@ -238,6 +238,10 @@
     line-height: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
   }
 
+  .footer__text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .decorated-zone::after {
     top: 20px;
     right: 20px;
@@ -324,6 +328,29 @@
 }
 
 @media (width >= 1024px) {
+  .header__theme-menu-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .header__title {
+    margin-left: -18px;
+  }
+
+  .section {
+    margin-top: 60px;
+  }
+
+  .section-2-columns {
+    gap: 10px;
+  }
+
+  .section__title {
+    margin-bottom: 0;
+  }
+
   .header__theme-menu {
     align-self: start;
     margin-left: auto;
@@ -332,6 +359,7 @@
 
   .header__theme-menu-list {
     display: flex;
+    gap: 8px;
   }
 
   .section-3-columns ul {
