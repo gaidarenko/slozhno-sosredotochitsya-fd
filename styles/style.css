@@ -129,9 +129,13 @@
 }
 
 .section {
-  margin: 40px 10px 0 10px;
+  margin: 52px 10px 0 10px;
 }
 
+.section:first-child {
+  margin-top: 40px;
+}
+/*
 .section:nth-child(2) {
   margin-top: 50px;
 }
@@ -143,7 +147,7 @@
 .section:nth-child(4) {
   margin-top: 52px;
 }
-
+*/
 .article__title {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -233,7 +237,7 @@
   }
 
   .header__title {
-    margin-left: -1rem;
+    margin-left: -16px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
   }
@@ -263,19 +267,11 @@
   }
   
   .section {
-    margin: 62px 20px 0 20px;
+    margin: 81px 20px 0 20px;
   }
 
-  .section:nth-child(2) {
-    margin-top: 81px;
-  }
-  
-  .section:nth-child(3) {
-    margin-top: 81px;
-  }
-
-  .section:nth-child(4) {
-    margin-top: 81px;
+  .section:first-child {
+    margin-top: 62px;
   }
 
   .section-2-columns {
