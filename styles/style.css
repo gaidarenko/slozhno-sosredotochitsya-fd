@@ -7,7 +7,7 @@
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #fff1f7; /* var(--bg-color); */
+  background-color: var(--page-color);
 }
 
 .header {

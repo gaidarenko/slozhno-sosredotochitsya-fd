@@ -15,6 +15,7 @@
   --text-color: #353430;
   --header-color: #ffc2e6;
   --title-color: #353430;
+  --page-color: #fff1f7;
   --btn-hover-color: rgba(50, 49, 45, 0.4);
 }
 
@@ -25,6 +26,7 @@
   --text-color: #353430;
   --header-color: #ffc2e6;
   --title-color: #353430;
+  --page-color: #fff1f7;
   --btn-hover-color: rgba(50, 49, 45, 0.4);
 }
 
@@ -36,6 +38,7 @@
     --text-color: #353430;
     --header-color: #ffc2e6;
     --title-color: #353430;
+    --page-color: #fff1f7;
     --btn-hover-color: rgba(50, 49, 45, 0.4);
   }
 }
