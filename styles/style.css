@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: 'IBM Plex mono', monospace;
   font-size: 18px;
   background-image: var(--bg-image);
   background-position: center center;
@@ -54,7 +54,7 @@
   content: 'REC';
   font-size: 18px;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 1.4em;
   padding-inline-end: 8px;
 }
 
@@ -111,11 +111,11 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
-  color: var(--bg-color);
   background-color: var(--accent-color);
 }
 
 .header__text {
+  color: var(--bg-color);
   inline-size: 50%;
   min-inline-size: 355px;
 }
@@ -196,7 +196,7 @@
 }
 
 .link:hover {
-  text-decoration: underline solid var(--text-color);
+  border-block-end: 1px solid var(--text-color);
 }
 
 .gallery_item__sunset {
@@ -262,21 +262,21 @@
     margin-block-start: 62px;
   }
 
-  .section-2-columns {
+  .section-others {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
-  .section-2-columns li:first-child .article__title {
+  .section-others li:first-child .article__title {
     margin-block-start: 0;
   }
 
-  .section-2-columns > article .article__title {
+  .section-others > article .article__title {
     margin-block-start: 0;
   } 
 
-  .section-3-columns .section__title {
+  .section-what .section__title {
     inline-size: calc(33% - 20px);
   }
 
@@ -301,16 +301,6 @@
   }
 }
 
-.theme-light .header__rec {
-  display: none;
-}
-
-@media (prefers-color-scheme: light) {
-  .theme-auto .header__rec {
-    display: none;
-  }
-}
-
 @media (width >= 1024px) {
   .header__theme-menu-button {
     margin-block-start: 0;
@@ -323,7 +313,7 @@
     margin-inline-start: -18px;
   }
 
-  .section-2-columns {
+  .section-others {
     gap: 10px;
   }
 
@@ -342,7 +332,7 @@
     gap: 8px;
   }
 
-  .section-3-columns ul {
+  .section-what ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
